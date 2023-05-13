@@ -13,7 +13,6 @@ class Student extends Manipulate implements General {
 
     public function __construct($dbname = 'barrientos') {
         $this->conn = Database::connect($dbname);
-        // var_dump($this->conn);
         $this->conn->query("CREATE TABLE IF NOT EXISTS $this->table (
             id int auto_increment primary key not null,
             last_name varchar(100) not null,
@@ -59,7 +58,5 @@ class Student extends Manipulate implements General {
 }
 
 $handler = new Student();
-
-
 
 ?>
